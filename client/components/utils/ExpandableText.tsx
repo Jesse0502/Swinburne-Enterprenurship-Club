@@ -7,7 +7,9 @@ interface Props {
 }
 
 export const ExpandableText = memo(({ noOfLines = 4, children }: Props) => {
-  const [expandedCount, setExpandedCount] = useState(noOfLines);
+  const [expandedCount, setExpandedCount] = useState<number | undefined>(
+    noOfLines
+  );
 
   const handleToggle = () =>
     setExpandedCount(expandedCount ? undefined : noOfLines);

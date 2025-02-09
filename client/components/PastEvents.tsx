@@ -121,7 +121,7 @@ const PastEvents = () => {
   );
 };
 
-const ScrambledPicture = ({ link, src, index, positions }) => {
+const ScrambledPicture = ({ link, src, index, positions }: any) => {
   const position = positions[index];
   if (!position) return <></>;
   const { ref } = useParallax({
@@ -130,6 +130,7 @@ const ScrambledPicture = ({ link, src, index, positions }) => {
   return (
     <Link href={link}>
       <Image
+        // @ts-ignore
         ref={ref}
         key={index}
         src={src}

@@ -11,7 +11,7 @@ const EASE_IN_OUT_BEZIER_SPLINES = "0.42 0 0.58 1";
 const SCROLL_DURATION = 500;
 const SCROLL_OFFSET = 480;
 
-const ArrowAnimation = ({ className, reference, scrollToWelcome }) => {
+const ArrowAnimation = ({ className, reference, scrollToWelcome }: any) => {
   const [clicked, setClicked] = useState(false);
   const [runAnimation, setRunAnimation] = useState(false);
   const router = useRouter();
@@ -26,6 +26,7 @@ const ArrowAnimation = ({ className, reference, scrollToWelcome }) => {
   return (
     runAnimation === false && (
       <Link
+        // @ts-ignore
         ref={ref}
         onClick={scrollToWelcome}
         aria-label="Scroll Down Prompt"

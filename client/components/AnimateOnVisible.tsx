@@ -1,3 +1,4 @@
+"use client";
 import { ScaleFade, SlideFade } from "@chakra-ui/react";
 import { ReactComponentElement, useEffect, useRef, useState } from "react";
 

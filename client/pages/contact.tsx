@@ -85,6 +85,7 @@ const ContactUs = () => {
               height="450"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=swinburne university hawthorn&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              // @ts-ignore
               frameborder="0"
               scrolling="no"
               marginheight="0"

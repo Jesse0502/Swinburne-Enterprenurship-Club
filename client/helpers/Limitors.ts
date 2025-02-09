@@ -1,5 +1,6 @@
-export const debounce = (callback, delay = 250) => {
-  let timeoutId;
+export const debounce = (callback: any, delay = 250) => {
+  let timeoutId: any;
+  // @ts-ignore
   return (...args) => {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
@@ -10,7 +11,7 @@ export const debounce = (callback, delay = 250) => {
 };
 
 // https://jsfiddle.net/jonathansampson/m7G64/
-export const throttle = (callback, limit = 250) => {
+export const throttle = (callback: any, limit = 250) => {
   let wait = false; // Initially, we're not waiting
   return () => {
     // We return a throttled function

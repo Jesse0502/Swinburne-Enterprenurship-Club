@@ -10,7 +10,7 @@ const NewsreaderFont = Newsreader({ subsets: ["latin"] });
 
 const PastEventsPage = () => {
   const [progress, setProgress] = useState(100);
-  const [events, setEvents] = useState({});
+  const [events, setEvents] = useState<any>({});
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -28,7 +28,7 @@ const PastEventsPage = () => {
   }, []);
 
   useEffect(() => {
-    const thisEvents = {};
+    const thisEvents: any = {};
     eventsHistory.forEach((e) => {
       console.log(Object.keys(thisEvents));
       if (
@@ -61,14 +61,14 @@ const PastEventsPage = () => {
             <EventTab />
           </Box>
           {Object.keys(events)
-            .sort((a, b) => b - a)
+            .sort((a: any, b: any) => b - a)
             .map((i, index) => (
               <Box minH="50vh" mt="10">
                 <Text fontSize={"xx-large"} fontWeight={"bold"} pb="1">
                   {i}
                 </Text>
                 <Flex flex="1 1 1" flexWrap={"wrap"} gap="2">
-                  {events[+i].map((e) => (
+                  {events[+i].map((e: any) => (
                     <EventTab e={e} />
                   ))}
                 </Flex>
@@ -99,7 +99,7 @@ const PastEventsPage = () => {
             h="200px"
           >
             {Object.keys(events)
-              .sort((a, b) => b - a)
+              .sort((a: any, b: any) => b - a)
               .map((i, index) => {
                 const activeYear =
                   Math.round(

@@ -50,7 +50,12 @@ export default function Home() {
     >
       <Navbar />
 
-      <Box id="hero" ref={ref} mt={["-28", "-20"]}>
+      <Box
+        id="hero"
+        // @ts-ignore
+        ref={ref}
+        mt={["-28", "-20"]}
+      >
         <Image
           w="full"
           h={["110vh", "100vh"]}
@@ -89,6 +94,7 @@ export default function Home() {
       </Box>
       <Flex
         flexDirection={["column-reverse", "row"]}
+        // @ts-ignore
         ref={ref2}
         mt={["-30vh", "-10vh"]}
         mb="14vh"

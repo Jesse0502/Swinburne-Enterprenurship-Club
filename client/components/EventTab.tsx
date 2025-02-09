@@ -2,9 +2,7 @@ import { ExternalLinkIcon, TimeIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 import { ExpandableText } from "./utils/ExpandableText";
 
-const PastEventTab = ({ e }) => {
-  console.log("i");
-  console.log("i", e);
+const PastEventTab = ({ e }: any) => {
   return (
     <Box border="1px solid black" w="40vh" flex="1 1 1" rounded="md">
       <Image src={e?.image} h="30vh" w="40vh" objectFit={"cover"} />
