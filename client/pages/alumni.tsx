@@ -83,6 +83,7 @@ const Alumni = () => {
               // variant={""}
               defaultValue={allYears[0]}
               isDisabled={!!searchQuery.trim()}
+              // @ts-ignore
               onChange={(selected) => setSelectedYear(selected?.target.value)}
             >
               {allYears.map((year) => (
