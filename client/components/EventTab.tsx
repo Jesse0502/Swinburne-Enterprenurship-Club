@@ -1,6 +1,7 @@
 import { ExternalLinkIcon, TimeIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 import { ExpandableText } from "./utils/ExpandableText";
+import { brandColor } from "@/helpers/constants";
 
 const PastEventTab = ({ e }: any) => {
   return (
@@ -25,6 +26,12 @@ const PastEventTab = ({ e }: any) => {
             {new Date(e?.date).toDateString()}
           </Text>
         </Flex>
+        {new Date().setHours(0, 0, 0, 0) <
+          new Date(e?.date).setHours(0, 0, 0, 0) && (
+          <Button as={Link} _hover={{}} bg={brandColor} color="white">
+            Buy a Ticket
+          </Button>
+        )}
       </Box>
     </Box>
   );

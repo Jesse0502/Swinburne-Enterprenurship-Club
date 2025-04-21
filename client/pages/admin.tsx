@@ -1,4 +1,4 @@
-import NotFopNavbar from "@/components/NotFopNavbar";
+import NotFopNavbar from "@/components/AltNavbar";
 import { brandColor } from "@/helpers/constants";
 import { Box, Button, Center, Flex, Input, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";

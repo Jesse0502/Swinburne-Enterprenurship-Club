@@ -1,7 +1,18 @@
 export const brandColor = "#e01e34";
 
-export const eventsHistory = [
+export const eventsHistory: EventInterface[] = [
   {
+    type: "Event",
+    image: "/pev_1.jpg",
+    title: "New Event",
+    description: "Dummy text",
+    date: new Date("April 23, 2025 18:00"),
+    link: "https://www.instagram.com/p/C553MorSE6b/?hl=en",
+    venue: "AMDC 501",
+    ticketLink: "",
+  },
+  {
+    type: "Event",
     image: "/pev_1.jpg",
     title:
       "Our exciting new event organised and co-hosted by Beta Alpha Psi Swinburne Charter!",
@@ -10,8 +21,11 @@ export const eventsHistory = [
     date: new Date("April 23, 2024 18:00"),
     link: "https://www.instagram.com/p/C553MorSE6b/?hl=en",
     venue: "AMDC 501",
+    ticketLink: "",
   },
   {
+    ticketLink: "",
+    type: "Event",
     image: "/pev_2.jpg",
     title: "Enterprenurship Social Night",
     description:
@@ -21,7 +35,9 @@ export const eventsHistory = [
     venue: "The Node",
   },
   {
+    type: "Event",
     image: "/pev_3.jpg",
+    ticketLink: "",
     title: "Networking For Success",
     description:
       "Join us for an extraordinary evening as we welcome @jahintanvir, 3-time TEDx speaker and CEO of the Australian School of Entrepreneurship who will enlighten us on the art of networking. 🤝 Prepare to discover the secrets to building meaningful connections and propelling your success to new heights! 🚀 Don’t miss this opportunity to learn from a true networking master",
@@ -30,15 +46,19 @@ export const eventsHistory = [
     venue: "",
   },
   {
+    type: "Event",
     image: "/pev_4.jpg",
     title: "Movie Night",
     description:
       "Join us for an exciting Movie Night on May 3rd! Come along for a relaxing social event with a film that will inspire and entertain. Whether you’re a movie buff, a finance enthusiast, enthusiastic entrepreneur or just looking for a fun evening, this event is for you!",
+    ticketLink: "",
     date: new Date("May 3, 2023 18:30"),
     link: "https://www.instagram.com/p/C6GIzmrOpYZ/?hl=en",
     venue: "BA302",
   },
   {
+    type: "Event",
+    ticketLink: "",
     image: "/pev_5.jpg",
     title: "Movie Night",
     description:
@@ -53,10 +73,16 @@ export const eventsHistory = [
     description:
       "Join us on 24th August 2023 for an inspiring evening with Dom Pym, the visionary co-founder of Up Bank, Pin Payments, and Ferocia.",
     date: new Date("August 24, 2024 17:00"),
+    ticketLink: "",
+    type: "Event",
+
     link: "https://www.instagram.com/p/Cvm2AsdSxGQ/?hl=en",
     venue: "AGSE 202",
   },
   {
+    type: "Event",
+
+    ticketLink: "",
     image: "/pev_7.jpg",
     title: "Fireside Chat with Arjun",
     description:
@@ -66,6 +92,7 @@ export const eventsHistory = [
     venue: "AGSE 202",
   },
   {
+    type: "Event",
     image: "/pev_8.jpg",
     title: "Building a Business in an Hour.....With no Code",
     description:
@@ -73,8 +100,11 @@ export const eventsHistory = [
     date: new Date("August 6, 2022 17:00"),
     link: "https://www.instagram.com/p/CpMT0Y_SwA4/?hl=en",
     venue: "",
+    ticketLink: "",
   },
   {
+    type: "Event",
+
     image: "/pev_9.jpg",
     title: "Concept with Production",
     description:
@@ -82,8 +112,12 @@ export const eventsHistory = [
     date: new Date("May 2, 2022 17:00"),
     link: "https://www.instagram.com/p/Ccx2x-uv3j0/?hl=en",
     venue: "",
+    ticketLink: "",
   },
+
   {
+    type: "Event",
+
     image: "/pev_10.jpg",
     title: "SEC X SPC Trivia Night",
     description:
@@ -91,8 +125,11 @@ export const eventsHistory = [
     date: new Date("March 8, 2022 17:00"),
     link: "https://www.instagram.com/p/Ca0o6lMvULt/?hl=en",
     venue: "Hammer and Swine",
+    ticketLink: "",
   },
   {
+    type: "Event",
+
     image: "/pev_11.jpg",
     title: "AGM + Games Night",
     description:
@@ -100,13 +137,398 @@ export const eventsHistory = [
     date: new Date("October 30, 2021 19:00"),
     link: "https://www.instagram.com/p/Ca0o6lMvULt/?hl=en",
     venue: "Hammer and Swine",
+    ticketLink: "",
   },
   {
+    type: "Event",
+
     image: "/pev_12.jpg",
     title: "Meet and Greet",
     description: "Get to know each other well!",
     date: new Date("September 18, 2021 18:00"),
     link: "https://www.instagram.com/p/CTeScGYBUt1/?hl=en",
     venue: "",
+    ticketLink: "",
   },
 ];
+export interface SocialMedia {
+  platform: string; // e.g., "Instagram", "LinkedIn"
+  username: string;
+  link: string;
+}
+
+export interface CommitteeMember {
+  name: string;
+  role: string;
+  year: number;
+  description?: string;
+  image?: string | null;
+  socialMedia?: SocialMedia[];
+}
+
+export const committeeMembers: { [year: number]: CommitteeMember[] } = {
+  2025: [
+    {
+      name: "Aditi Aggarwal",
+      role: "President",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Dinethra",
+      role: "Secretary",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Lakshit Bansal",
+      role: "Treasurer",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Jasmeet Singh",
+      role: "Web Developer Lead",
+      year: 2025,
+      description:
+        "Jasmeet is a Masters student specializing in Cloud Engineering & Software development. With a successful freelancing career working with over 20 international clients. His interests extend to cloud computing and emerging technologies. Outside of tech, Jasmeet enjoys making music as a creative outlet and loves bike riding.",
+      image: "me.enc",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "https://www.linkedin.com/in/jasmeet-singh-3b5b91185",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "https://instagram.com/jesse_0502",
+        },
+      ],
+    },
+    {
+      name: "Tamjid Ahmed",
+      role: "Events Lead",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Sabira Hussaini",
+      role: "Events Team",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Srishti Jindal",
+      role: "Events Lead",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Sandun Ranasinghe",
+      role: "Events Lead",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Yash Ediriweera",
+      role: "Marketing & Social Media Team",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Bhumika Sharma",
+      role: "Marketing & Social Media Team",
+      year: 2025,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "",
+          link: "",
+        },
+      ],
+    },
+  ],
+  2024: [
+    {
+      name: "Sophie Watson",
+      role: "President",
+      year: 2024,
+      description: "2024 president description...",
+      image: "./sophie-pres.jpg",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "prev-president",
+          link: "https://linkedin.com/in/prev-president",
+        },
+      ],
+    },
+    {
+      name: "Taylor Pham",
+      role: "Vice-President",
+      year: 2024,
+      description: "2024 president description...",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "prev-president",
+          link: "https://linkedin.com/in/prev-president",
+        },
+      ],
+    },
+    {
+      name: "Jowairiyah Azhar",
+      role: "Secretary",
+      year: 2024,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "prev-president",
+          link: "https://linkedin.com/in/prev-president",
+        },
+      ],
+    },
+    {
+      name: "Jasmeet Singh",
+      role: "Web Developer Lead",
+      year: 2024,
+      description:
+        "Jasmeet is a Masters student specializing in Cloud Engineering & Software development. With a successful freelancing career working with over 20 international clients. His interests extend to cloud computing and emerging technologies. Outside of tech, Jasmeet enjoys making music as a creative outlet and loves bike riding.",
+      image: "me.enc",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "https://www.linkedin.com/in/jasmeet-singh-3b5b91185",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "https://instagram.com/jesse_0502",
+        },
+      ],
+    },
+    {
+      name: "Molika Meng",
+      role: "Social Media Lead",
+      year: 2024,
+      description: "",
+      image: "molika_meng.enc",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Siddharth Krishnan",
+      role: "Marketing Lead",
+      year: 2024,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Le Tam Ha",
+      role: "Community Lead",
+      year: 2024,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Femmy Juliani",
+      role: "Event Lead",
+      year: 2024,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "",
+        },
+      ],
+    },
+    {
+      name: "Yash Kumar Bansal",
+      role: "Event Lead",
+      year: 2024,
+      description: "",
+      image: "",
+      socialMedia: [
+        {
+          platform: "LinkedIn",
+          username: "Linkedin",
+          link: "",
+        },
+        {
+          platform: "Instagram",
+          username: "jesse_0502",
+          link: "",
+        },
+      ],
+    },
+  ],
+  // Add more years as needed
+};
+
+export interface EventInterface {
+  type?: "Event" | "AGM" | string; // Use union type for specific event types
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  venue: string;
+  date: Date | string;
+  ticketLink?: string | null; // Nullable for events without tickets
+}

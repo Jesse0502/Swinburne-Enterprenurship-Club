@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import NotFopNavbar from "@/components/NotFopNavbar";
+import AltNavbar from "@/components/AltNavbar";
 import EventTab from "@/components/EventTab";
 import { Box, Flex, Progress, Text } from "@chakra-ui/react";
 import { Newsreader } from "next/font/google";
@@ -53,13 +53,13 @@ const PastEventsPage = () => {
       className={NewsreaderFont.className}
       pos="relative"
     >
-      <NotFopNavbar />
+      <AltNavbar />
       <Flex px="20">
-        <Flex flexDir={"column"} my="10" flex="2 1">
-          <Box minH="50vh">
+        <Flex flexDir={"column"} mb="10" flex="2 1">
+          {/* <Box minH="50vh">
             <Text>Upcoming Events</Text>
             <EventTab />
-          </Box>
+          </Box> */}
           {Object.keys(events)
             .sort((a: any, b: any) => b - a)
             .map((i, index) => (

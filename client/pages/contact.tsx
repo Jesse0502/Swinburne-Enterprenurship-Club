@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import NotFopNavbar from "@/components/NotFopNavbar";
+import NotFopNavbar from "@/components/AltNavbar";
 import { brandColor } from "@/helpers/constants";
 import {
   Box,

@@ -1,3 +1,6 @@
+// Buy a ticket, get a confirmation QR code
+// Buy a ticket, user pdf for QR code confirmation, add clyb emial, make a new page for payments, remove, alumni page history of club
+
 import { Box, Divider, Flex, Image, Text } from "@chakra-ui/react";
 import AnimateOnVisible from "@/components/AnimateOnVisible";
 import { useParallax } from "react-scroll-parallax";

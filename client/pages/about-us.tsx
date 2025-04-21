@@ -1,7 +1,8 @@
 import AnimateOnVisible from "@/components/AnimateOnVisible";
 import Footer from "@/components/Footer";
-import NotFopNavbar from "@/components/NotFopNavbar";
+import NotFopNavbar from "@/components/AltNavbar";
 import { Box, Center, Flex, Image, Text } from "@chakra-ui/react";
+import { brandColor } from "@/helpers/constants";
 
 const AboutUs = () => {
   return (
@@ -22,7 +23,29 @@ const AboutUs = () => {
             About Us
           </Text>
         </Center>
-        <Flex
+        <Box px="32" my="10">
+          <Text fontSize={"2xl"} textAlign={"left"} color={brandColor}>
+            A team of driven Swinburne University students, specializing in
+            Business and Entrepreneurship, delivers insightful analysis and
+            joint strategies, actively shaping the landscape of startup
+            innovation.
+          </Text>
+          <Flex gap="10" mt="10">
+            {[
+              "Fueled by the innovative spirit of Swinburne University's entrepreneurial and business initiatives, our community aims to redefine traditional business ventures. We blend progressive academic concepts with real-world startup experiences, offering insightful strategies and dynamic frameworks that empower our members to navigate the challenges of today's entrepreneurial ecosystems.",
+              `At the heart of our mission is the fostering of pioneering leadership,
+  developed through rigorous entrepreneurial learning and hands-on projects.
+  We advocate for a forward-thinking approach to business development, anticipating
+  industry trends and utilizing disruptive technologies to achieve
+  groundbreaking results.`,
+            ].map((i) => (
+              <Text flex="1" fontSize={"sm"} opacity="0.8">
+                {i}
+              </Text>
+            ))}
+          </Flex>
+        </Box>
+        {/* <Flex
           py="20"
           // px="12"
           gap="20"
@@ -56,7 +79,7 @@ const AboutUs = () => {
             </Text>
           </Box>
           <Image rounded={"full"} src="sophie_pres.jpg" height={"30vh"} />
-        </Flex>
+        </Flex> */}
         <AnimateOnVisible>
           <Box px="32" pt="10">
             <Center gap="2" alignItems={"center"}>
