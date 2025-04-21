@@ -33,13 +33,17 @@ const PastEventsPage = () => {
       console.log(Object.keys(thisEvents));
       if (
         Object.keys(thisEvents) &&
+        // @ts-ignore
         Object.keys(thisEvents).includes(`${e.date.getFullYear()}`)
       ) {
+        // @ts-ignore
         thisEvents[e.date.getFullYear()] = [
+          // @ts-ignore
           ...thisEvents[e.date.getFullYear()],
           e,
         ];
       } else {
+        // @ts-ignore
         thisEvents[e.date.getFullYear()] = [e];
       }
     });
